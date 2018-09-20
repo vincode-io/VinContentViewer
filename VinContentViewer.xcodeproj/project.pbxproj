@@ -12,6 +12,16 @@
 		518D3D212152BC6400A076B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518D3D202152BC6400A076B6 /* Assets.xcassets */; };
 		518D3D242152BC6400A076B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518D3D222152BC6400A076B6 /* Main.storyboard */; };
 		518D3D302152BC6400A076B6 /* VinContentViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518D3D2F2152BC6400A076B6 /* VinContentViewerTests.swift */; };
+		518D3D632152C29A00A076B6 /* styleSheet.css in Resources */ = {isa = PBXBuildFile; fileRef = 518D3D622152C29900A076B6 /* styleSheet.css */; };
+		518D3D652152C4B200A076B6 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518D3D642152C4B200A076B6 /* WindowController.swift */; };
+		51B8A06E215425A100EEA621 /* VinXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B8A06D215425A100EEA621 /* VinXML.framework */; };
+		51B8A06F215425A100EEA621 /* VinXML.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 51B8A06D215425A100EEA621 /* VinXML.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		51B8A071215425A400EEA621 /* VinContent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B8A070215425A400EEA621 /* VinContent.framework */; };
+		51B8A072215425A400EEA621 /* VinContent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 51B8A070215425A400EEA621 /* VinContent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		51B8A0A4215435AB00EEA621 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 51B8A0A3215435AB00EEA621 /* icon.icns */; };
+		51B8A0A6215435AB00EEA621 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8A0A5215435AB00EEA621 /* ShareViewController.swift */; };
+		51B8A0A9215435AB00EEA621 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B8A0A7215435AB00EEA621 /* ShareViewController.xib */; };
+		51B8A0AE215435AB00EEA621 /* VinContentViewerShareExt.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 51B8A0A1215435AB00EEA621 /* VinContentViewerShareExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +32,40 @@
 			remoteGlobalIDString = 518D3D182152BC6200A076B6;
 			remoteInfo = VinContentViewer;
 		};
+		51B8A0AC215435AB00EEA621 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 518D3D112152BC6200A076B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51B8A0A0215435AB00EEA621;
+			remoteInfo = VinContentViewerShareExt;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		51163343215422DB0043643C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				51B8A072215425A400EEA621 /* VinContent.framework in Embed Frameworks */,
+				51B8A06F215425A100EEA621 /* VinXML.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51B8A0B2215435AB00EEA621 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				51B8A0AE215435AB00EEA621 /* VinContentViewerShareExt.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		518D3D192152BC6200A076B6 /* VinContentViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VinContentViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +78,16 @@
 		518D3D2B2152BC6400A076B6 /* VinContentViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinContentViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		518D3D2F2152BC6400A076B6 /* VinContentViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinContentViewerTests.swift; sourceTree = "<group>"; };
 		518D3D312152BC6400A076B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		518D3D622152C29900A076B6 /* styleSheet.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styleSheet.css; sourceTree = "<group>"; };
+		518D3D642152C4B200A076B6 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		51B8A06D215425A100EEA621 /* VinXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VinXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51B8A070215425A400EEA621 /* VinContent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VinContent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51B8A0A1215435AB00EEA621 /* VinContentViewerShareExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VinContentViewerShareExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		51B8A0A3215435AB00EEA621 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		51B8A0A5215435AB00EEA621 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		51B8A0A8215435AB00EEA621 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ShareViewController.xib; sourceTree = "<group>"; };
+		51B8A0AA215435AB00EEA621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51B8A0AB215435AB00EEA621 /* VinContentViewerShareExt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VinContentViewerShareExt.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,10 +95,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B8A071215425A400EEA621 /* VinContent.framework in Frameworks */,
+				51B8A06E215425A100EEA621 /* VinXML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		518D3D282152BC6400A076B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51B8A09E215435AB00EEA621 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,8 +120,12 @@
 		518D3D102152BC6200A076B6 = {
 			isa = PBXGroup;
 			children = (
+				51B8A070215425A400EEA621 /* VinContent.framework */,
+				51B8A06D215425A100EEA621 /* VinXML.framework */,
 				518D3D1B2152BC6200A076B6 /* VinContentViewer */,
 				518D3D2E2152BC6400A076B6 /* VinContentViewerTests */,
+				518D3D502152C20800A076B6 /* Dependecies */,
+				51B8A0A2215435AB00EEA621 /* VinContentViewerShareExt */,
 				518D3D1A2152BC6200A076B6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +135,7 @@
 			children = (
 				518D3D192152BC6200A076B6 /* VinContentViewer.app */,
 				518D3D2B2152BC6400A076B6 /* VinContentViewerTests.xctest */,
+				51B8A0A1215435AB00EEA621 /* VinContentViewerShareExt.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,11 +144,13 @@
 			isa = PBXGroup;
 			children = (
 				518D3D1C2152BC6200A076B6 /* AppDelegate.swift */,
+				518D3D642152C4B200A076B6 /* WindowController.swift */,
 				518D3D1E2152BC6200A076B6 /* ViewController.swift */,
 				518D3D202152BC6400A076B6 /* Assets.xcassets */,
 				518D3D222152BC6400A076B6 /* Main.storyboard */,
 				518D3D252152BC6400A076B6 /* Info.plist */,
 				518D3D262152BC6400A076B6 /* VinContentViewer.entitlements */,
+				518D3D622152C29900A076B6 /* styleSheet.css */,
 			);
 			path = VinContentViewer;
 			sourceTree = "<group>";
@@ -95,6 +164,25 @@
 			path = VinContentViewerTests;
 			sourceTree = "<group>";
 		};
+		518D3D502152C20800A076B6 /* Dependecies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dependecies;
+			sourceTree = "<group>";
+		};
+		51B8A0A2215435AB00EEA621 /* VinContentViewerShareExt */ = {
+			isa = PBXGroup;
+			children = (
+				51B8A0A3215435AB00EEA621 /* icon.icns */,
+				51B8A0A5215435AB00EEA621 /* ShareViewController.swift */,
+				51B8A0A7215435AB00EEA621 /* ShareViewController.xib */,
+				51B8A0AA215435AB00EEA621 /* Info.plist */,
+				51B8A0AB215435AB00EEA621 /* VinContentViewerShareExt.entitlements */,
+			);
+			path = VinContentViewerShareExt;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,10 +193,13 @@
 				518D3D152152BC6200A076B6 /* Sources */,
 				518D3D162152BC6200A076B6 /* Frameworks */,
 				518D3D172152BC6200A076B6 /* Resources */,
+				51163343215422DB0043643C /* Embed Frameworks */,
+				51B8A0B2215435AB00EEA621 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				51B8A0AD215435AB00EEA621 /* PBXTargetDependency */,
 			);
 			name = VinContentViewer;
 			productName = VinContentViewer;
@@ -133,6 +224,23 @@
 			productReference = 518D3D2B2152BC6400A076B6 /* VinContentViewerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		51B8A0A0215435AB00EEA621 /* VinContentViewerShareExt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51B8A0B1215435AB00EEA621 /* Build configuration list for PBXNativeTarget "VinContentViewerShareExt" */;
+			buildPhases = (
+				51B8A09D215435AB00EEA621 /* Sources */,
+				51B8A09E215435AB00EEA621 /* Frameworks */,
+				51B8A09F215435AB00EEA621 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VinContentViewerShareExt;
+			productName = VinContentViewerShareExt;
+			productReference = 51B8A0A1215435AB00EEA621 /* VinContentViewerShareExt.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -141,7 +249,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = "VIneyard Enterprise Software, Inc.";
+				ORGANIZATIONNAME = "Vincode, Inc.";
 				TargetAttributes = {
 					518D3D182152BC6200A076B6 = {
 						CreatedOnToolsVersion = 10.0;
@@ -149,6 +257,9 @@
 					518D3D2A2152BC6400A076B6 = {
 						CreatedOnToolsVersion = 10.0;
 						TestTargetID = 518D3D182152BC6200A076B6;
+					};
+					51B8A0A0215435AB00EEA621 = {
+						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
@@ -167,6 +278,7 @@
 			targets = (
 				518D3D182152BC6200A076B6 /* VinContentViewer */,
 				518D3D2A2152BC6400A076B6 /* VinContentViewerTests */,
+				51B8A0A0215435AB00EEA621 /* VinContentViewerShareExt */,
 			);
 		};
 /* End PBXProject section */
@@ -178,6 +290,7 @@
 			files = (
 				518D3D212152BC6400A076B6 /* Assets.xcassets in Resources */,
 				518D3D242152BC6400A076B6 /* Main.storyboard in Resources */,
+				518D3D632152C29A00A076B6 /* styleSheet.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +298,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51B8A09F215435AB00EEA621 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51B8A0A9215435AB00EEA621 /* ShareViewController.xib in Resources */,
+				51B8A0A4215435AB00EEA621 /* icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				518D3D1F2152BC6200A076B6 /* ViewController.swift in Sources */,
+				518D3D652152C4B200A076B6 /* WindowController.swift in Sources */,
 				518D3D1D2152BC6200A076B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +331,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51B8A09D215435AB00EEA621 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51B8A0A6215435AB00EEA621 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -215,6 +346,11 @@
 			isa = PBXTargetDependency;
 			target = 518D3D182152BC6200A076B6 /* VinContentViewer */;
 			targetProxy = 518D3D2C2152BC6400A076B6 /* PBXContainerItemProxy */;
+		};
+		51B8A0AD215435AB00EEA621 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51B8A0A0215435AB00EEA621 /* VinContentViewerShareExt */;
+			targetProxy = 51B8A0AC215435AB00EEA621 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -225,6 +361,14 @@
 				518D3D232152BC6400A076B6 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		51B8A0A7215435AB00EEA621 /* ShareViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51B8A0A8215435AB00EEA621 /* Base */,
+			);
+			name = ShareViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -281,6 +425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -336,6 +481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -348,11 +494,11 @@
 		518D3D352152BC6400A076B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = VinContentViewer/VinContentViewer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = BRUBJF34UC;
+				DEVELOPMENT_TEAM = SHJK2V3AJG;
 				INFOPLIST_FILE = VinContentViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -367,11 +513,11 @@
 		518D3D362152BC6400A076B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = VinContentViewer/VinContentViewer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = BRUBJF34UC;
+				DEVELOPMENT_TEAM = SHJK2V3AJG;
 				INFOPLIST_FILE = VinContentViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -425,6 +571,46 @@
 			};
 			name = Release;
 		};
+		51B8A0AF215435AB00EEA621 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = VinContentViewerShareExt/VinContentViewerShareExt.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SHJK2V3AJG;
+				INFOPLIST_FILE = VinContentViewerShareExt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vineyardenterprise.VinContentViewer.VinContentViewerShareExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		51B8A0B0215435AB00EEA621 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = VinContentViewerShareExt/VinContentViewerShareExt.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SHJK2V3AJG;
+				INFOPLIST_FILE = VinContentViewerShareExt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vineyardenterprise.VinContentViewer.VinContentViewerShareExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -451,6 +637,15 @@
 			buildConfigurations = (
 				518D3D382152BC6400A076B6 /* Debug */,
 				518D3D392152BC6400A076B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51B8A0B1215435AB00EEA621 /* Build configuration list for PBXNativeTarget "VinContentViewerShareExt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51B8A0AF215435AB00EEA621 /* Debug */,
+				51B8A0B0215435AB00EEA621 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
