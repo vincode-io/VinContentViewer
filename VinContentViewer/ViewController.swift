@@ -44,8 +44,35 @@ class ViewController: NSViewController {
 //        let url = URL(string: "https://blog.chromium.org/2018/02/chrome-65-beta-css-paint-api-and.html")
 //        let url = URL(string: "https://developer.apple.com/documentation/uikit/view_controllers/preserving_your_app_s_ui_across_launches?language=swift")
         
-        let testName = "wired"
-        let testSource = "https://www.wired.com/2017/03/now-we-know-why-microsoft-bought-linkedin/"
+//        let testName = "authenticavl"
+//        let testSource = "https://authenticavl.com/travel/crater-lake-national-park/"
+
+        let testName = "bandbblog"
+        let testSource = "http://beaniesandbikinisblog.com/shambhala-2018/"
+        
+//        let testName = "foxnews"
+//        let testSource = "http://www.foxnews.com/us/2018/09/24/woman-in-viral-memorial-day-beach-arrest-is-indicted.html"
+        
+//        let testName = "android-dev"
+//        let testSource = "https://android-developers.googleblog.com/2018/09/android-studio-32.html"
+
+//        let testName = "mandatory"
+//        let testSource = "http://www.mandatory.com/living/1465085-ranked-the-5-best-programming-languages-you-should-learn-in-2018"
+//
+//        let testName = "forbes"
+//        let testSource = "https://www.forbes.com/sites/startswithabang/2018/07/20/this-simple-thought-experiment-shows-why-we-need-quantum-gravity/"
+
+//        let testName = "nytimes"
+//        let testSource = "https://www.nytimes.com/2018/09/24/world/middleeast/iran-attack-military-parade.html"
+
+//        let testName = "washingtonpost"
+//        let testSource = "https://www.washingtonpost.com/politics/2018/09/23/cosby-accusers-powerful-message-christine-blasey-ford/?utm_term=.568a8bde6833"
+        
+//        let testName = "mondaynote"
+//        let testSource = "https://mondaynote.com/50-years-in-tech-part-5-starting-apple-france-a925e0d4c169?source=rss-d6c6baafd47d------2"
+        
+//        let testName = "wired"
+//        let testSource = "https://www.wired.com/2017/03/now-we-know-why-microsoft-bought-linkedin"
         
         // Load the input HTML
         let testURL = URL(string: testSource)!
@@ -71,6 +98,7 @@ class ViewController: NSViewController {
         print("* Article Publisher: \(String(describing: article.publisher))")
         print("* Article Publish Date: \(String(describing: article.publishDate?.description))")
         print("* Article Byline: \(String(describing: article.byline))")
+        print("* Article Source: \(String(describing: article.description))")
         print("* Article Source: \(String(describing: article.source?.absoluteString))")
         print("**************************************************")
     }
