@@ -4,8 +4,37 @@ import Cocoa
 import WebKit
 import VinContent
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, ContentExtractorDelegate {
+ 
+//    let testName = "authenticavl"
+//    let testSource = "https://authenticavl.com/travel/crater-lake-national-park/"
+    
+    //        let testName = "foxnews"
+    //        let testSource = "http://www.foxnews.com/us/2018/09/24/woman-in-viral-memorial-day-beach-arrest-is-indicted.html"
+    
+    //        let testName = "android-dev"
+    //        let testSource = "https://android-developers.googleblog.com/2018/09/android-studio-32.html"
+    
+    //        let testName = "mandatory"
+    //        let testSource = "http://www.mandatory.com/living/1465085-ranked-the-5-best-programming-languages-you-should-learn-in-2018"
+    //
+    //        let testName = "forbes"
+    //        let testSource = "https://www.forbes.com/sites/startswithabang/2018/07/20/this-simple-thought-experiment-shows-why-we-need-quantum-gravity/"
+    
+    
+    //        let testName = "washingtonpost"
+    //        let testSource = "https://www.washingtonpost.com/politics/2018/09/23/cosby-accusers-powerful-message-christine-blasey-ford/?utm_term=.568a8bde6833"
+    
+    //        let testName = "mondaynote"
+    //        let testSource = "https://mondaynote.com/50-years-in-tech-part-5-starting-apple-france-a925e0d4c169?source=rss-d6c6baafd47d------2"
+    
+//    let testName = "wired"
+//    let testSource = "https://www.wired.com/2017/03/now-we-know-why-microsoft-bought-linkedin"
 
+    let testName = "nytimes"
+    let testSource = "https://www.nytimes.com/2018/09/24/world/middleeast/iran-attack-military-parade.html"
+
+    private var extractor: ContentExtractor!
     private var webView: WKWebView!
     
     override func viewDidLoad() {
@@ -35,63 +64,38 @@ class ViewController: NSViewController {
                 webView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
             ])
         
+        
+        let url = URL(string: testSource)!
+        extractor = ContentExtractor(url)
+        extractor.delegate = self
+        extractor.process()
+        
+    }
+
+    func processDidFail(with error: Error) {
+        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        print(error)
+        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    }
+    
+    func processDidComplete(article: ExtractedArticle) {
+        
         guard let documentDirectory = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask).first else {
             return
         }
-        
-        
-//        let url = URL(string: "https://kottke.org/18/09/the-fish-copter-cactus-binky-and-other-clever-visual-mashups")
-//        let url = URL(string: "https://blog.chromium.org/2018/02/chrome-65-beta-css-paint-api-and.html")
-//        let url = URL(string: "https://developer.apple.com/documentation/uikit/view_controllers/preserving_your_app_s_ui_across_launches?language=swift")
-        
-//        let testName = "authenticavl"
-//        let testSource = "https://authenticavl.com/travel/crater-lake-national-park/"
 
-        let testName = "bandbblog"
-        let testSource = "http://beaniesandbikinisblog.com/shambhala-2018/"
-        
-//        let testName = "foxnews"
-//        let testSource = "http://www.foxnews.com/us/2018/09/24/woman-in-viral-memorial-day-beach-arrest-is-indicted.html"
-        
-//        let testName = "android-dev"
-//        let testSource = "https://android-developers.googleblog.com/2018/09/android-studio-32.html"
-
-//        let testName = "mandatory"
-//        let testSource = "http://www.mandatory.com/living/1465085-ranked-the-5-best-programming-languages-you-should-learn-in-2018"
-//
-//        let testName = "forbes"
-//        let testSource = "https://www.forbes.com/sites/startswithabang/2018/07/20/this-simple-thought-experiment-shows-why-we-need-quantum-gravity/"
-
-//        let testName = "nytimes"
-//        let testSource = "https://www.nytimes.com/2018/09/24/world/middleeast/iran-attack-military-parade.html"
-
-//        let testName = "washingtonpost"
-//        let testSource = "https://www.washingtonpost.com/politics/2018/09/23/cosby-accusers-powerful-message-christine-blasey-ford/?utm_term=.568a8bde6833"
-        
-//        let testName = "mondaynote"
-//        let testSource = "https://mondaynote.com/50-years-in-tech-part-5-starting-apple-france-a925e0d4c169?source=rss-d6c6baafd47d------2"
-        
-//        let testName = "wired"
-//        let testSource = "https://www.wired.com/2017/03/now-we-know-why-microsoft-bought-linkedin"
-        
-        // Load the input HTML
-        let testURL = URL(string: testSource)!
-        let inputHTML = try! String(contentsOf: testURL)
-
-        // Write out the source HTML for testing
-        let inputURL = documentDirectory.appendingPathComponent("\(testName)-input.html")
-        try! inputHTML.write(to: inputURL, atomically: true, encoding: .utf16)
-
-        let article = try! ContentExtractor.extractArticle(from: inputHTML, source: testURL)
         let content = article.wrappedContent!
+        
+        let inputURL = documentDirectory.appendingPathComponent("\(testName)-input.html")
+        try! article.sourceHTML!.write(to: inputURL, atomically: true, encoding: .utf8)
 
         // Render the content in the window
         let html = renderHTML(withBody: content)
         webView!.loadHTMLString(html, baseURL: nil)
-
+        
         // Write the result out for tests
         let resultURL = documentDirectory.appendingPathComponent("\(testName)-expected.html")
-        try! content.write(to: resultURL, atomically: true, encoding: .utf16)
+        try! content.write(to: resultURL, atomically: true, encoding: .utf8)
         
         print("**************************************************")
         print("* Article Title: \(String(describing: article.title))")
@@ -101,8 +105,9 @@ class ViewController: NSViewController {
         print("* Article Source: \(String(describing: article.description))")
         print("* Article Source: \(String(describing: article.source?.absoluteString))")
         print("**************************************************")
+        
     }
-
+    
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
