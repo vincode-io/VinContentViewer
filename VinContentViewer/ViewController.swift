@@ -31,9 +31,12 @@ class ViewController: NSViewController, ContentExtractorDelegate {
 //    let testName = "wired"
 //    let testSource = "https://www.wired.com/2017/03/now-we-know-why-microsoft-bought-linkedin"
 
-    let testName = "nytimes"
-    let testSource = "https://www.nytimes.com/2018/09/24/world/middleeast/iran-attack-military-parade.html"
+    //    let testName = "nytimes"
+//    let testSource = "https://www.nytimes.com/2018/09/24/world/middleeast/iran-attack-military-parade.html"
 
+    let testName = "macworld"
+    let testSource = "https://www.macworld.com/article/3309580/os-x/mojave-and-the-future-of-the-mac.html"
+    
     private var extractor: ContentExtractor!
     private var webView: WKWebView!
     
@@ -65,8 +68,17 @@ class ViewController: NSViewController, ContentExtractorDelegate {
             ])
         
         
-        let url = URL(string: testSource)!
-        extractor = ContentExtractor(url)
+//        guard let documentDirectory = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask).first else {
+//            return
+//        }
+//        let inputURL = documentDirectory.appendingPathComponent("\(testName)-input.html")
+//
+//        if (try? inputURL.checkResourceIsReachable()) ?? false {
+//            extractor = ContentExtractor(inputURL)
+//        } else {
+            let url = URL(string: testSource)!
+            extractor = ContentExtractor(url)
+//        }
         extractor.delegate = self
         extractor.process()
         
