@@ -84,13 +84,13 @@ class ViewController: NSViewController, ContentExtractorDelegate {
         
     }
 
-    func processDidFail(with error: Error) {
+    func contentExtractionDidFail(with error: Error) {
         print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         print(error)
         print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
     }
     
-    func processDidComplete(article: ExtractedArticle) {
+    func contentExtractionDidComplete(article: ExtractedArticle) {
         
         guard let documentDirectory = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask).first else {
             return
